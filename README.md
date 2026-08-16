@@ -11,5 +11,3 @@ Edge AI: Deployed lightweight PyTorch/TensorFlow inference models on Raspberry P
 Cloud Processing: Used AWS IoT Core for secure device connectivity, Lambda for event-driven processing, S3 for historical energy-data storage, and EC2 for cloud-hosted analytics and ML services.
 Cybersecurity: Implemented authenticated bidirectional edge–cloud communication, anomaly/threat monitoring, configurable alerting, event logging, device traceability, and security controls for connected energy assets.
 Output: Enabled real-time energy monitoring, abnormal-consumption detection, load and demand analysis, edge-based intelligent decision-making, secure device management, and cloud-based energy analytics for dynamic industrial and smart-grid environments.
-
-For your CV, I would actually title this project “Edge AI–Enabled Smart Grid Energy Management System” rather than simply “Smart Grid Energy Management System.” It connects much more strongly with your ConnectX experience and positions you for Smart Grid, Energy AI, Industrial IoT, Embedded Systems, Edge AI, and AWS IoT roles.
