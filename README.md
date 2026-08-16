@@ -1,13 +1,13 @@
-Smart Grid / Energy Management System — Edge AI & AWS Cloud
+GridEdge-ML: Adaptive Edge–Cloud AI for Smart Grid Energy Management
 
-This work develops a secure edge-to-cloud smart energy management architecture for industrial and smart-grid environments. Field devices, smart meters, sensors, and energy assets are connected to Raspberry Pi edge gateways, where lightweight ML models perform real-time energy monitoring, anomaly detection, and local decision-making. Computationally intensive analytics, historical processing, forecasting, and system-wide monitoring are handled through AWS cloud services, enabling scalable and low-latency energy management.
+GridEdge-ML is an end-to-end machine learning, Edge AI, and MLOps platform for intelligent smart-grid energy management. It analyzes multivariate grid telemetry to support load forecasting, anomaly detection, operational monitoring, and adaptive edge–cloud inference while balancing prediction accuracy, latency, model size, and computational cost.
 
-Architecture: Designed an edge–cloud architecture integrating smart meters, industrial field devices, Raspberry Pi gateways, Edge AI inference, and AWS-based energy-data processing.
-Tools & Platforms: Python, Jupyter Notebook, Raspberry Pi 4B, AWS IoT Core, AWS Lambda, Amazon S3, Amazon EC2, pandas, NumPy, scikit-learn, PyTorch, and TensorFlow.
-Industrial Connectivity: Integrated real-time energy and equipment data using MQTT, REST APIs, Modbus TCP/RTU, and CAN bus, enabling communication between field devices, edge gateways, and cloud applications.
-Energy Analytics & Feature Engineering: Developed features including power deviation, rate-of-change, rolling statistics, energy-consumption patterns, device-state transitions, communication latency, and message frequency for operational monitoring and intelligent energy analysis.
-AI/ML Techniques: Applied load/energy-consumption prediction, anomaly detection, Isolation Forest, One-Class SVM, statistical thresholding, and autoencoder-based approaches to identify abnormal energy usage and equipment operating conditions.
-Edge AI: Deployed lightweight PyTorch/TensorFlow inference models on Raspberry Pi for near-real-time analysis, reducing cloud dependency, communication latency, and unnecessary data transmission.
-Cloud Processing: Used AWS IoT Core for secure device connectivity, Lambda for event-driven processing, S3 for historical energy-data storage, and EC2 for cloud-hosted analytics and ML services.
-Cybersecurity: Implemented authenticated bidirectional edge–cloud communication, anomaly/threat monitoring, configurable alerting, event logging, device traceability, and security controls for connected energy assets.
-Output: Enabled real-time energy monitoring, abnormal-consumption detection, load and demand analysis, edge-based intelligent decision-making, secure device management, and cloud-based energy analytics for dynamic industrial and smart-grid environments.
+The project benchmarks multiple ML and deep-learning approaches, including Ridge Regression, Random Forest, Extra Trees, HistGradientBoosting, PyTorch LSTM, Isolation Forest, One-Class SVM, statistical thresholding, and autoencoder-based anomaly detection. It also includes time-series backtesting, feature-ablation studies, feature-importance analysis, inference-latency benchmarking, and reproducible model evaluation.
+
+The architecture integrates Raspberry Pi edge gateways with MQTT, REST APIs, Modbus TCP/RTU, and CAN bus for real-time industrial telemetry. Lightweight models can execute locally at the edge, while uncertain, anomalous, or computationally intensive cases are escalated to cloud services.
+
+Cloud workflows use AWS IoT Core, AWS Lambda, Amazon S3, and EC2 for device connectivity, event-driven processing, data storage, and scalable ML analytics.
+
+The repository also demonstrates practical MLOps and production ML practices through modular Python pipelines, Docker containerization, pytest-based testing, GitHub Actions CI, model monitoring, event logging, reproducible experiments, and deployment-oriented workflows.
+
+Technologies: Python, pandas, NumPy, scikit-learn, PyTorch, Jupyter, Raspberry Pi, AWS IoT Core, Lambda, S3, EC2, MQTT, Modbus TCP/RTU, CAN bus, REST APIs, Docker, pytest, GitHub Actions, Git, YAML, joblib.
