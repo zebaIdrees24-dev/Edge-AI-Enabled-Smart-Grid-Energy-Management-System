@@ -1,4 +1,4 @@
-GridEdge-ML: Adaptive Edge–Cloud AI for Smart Grid Energy Management
+This repository presents the implemetation of GridEdge-ML: Adaptive Edge–Cloud AI for Smart Grid Energy Management
 
 GridEdge-ML is an end-to-end machine learning, Edge AI, and MLOps platform for intelligent smart-grid energy management. It analyzes multivariate grid telemetry to support load forecasting, anomaly detection, operational monitoring, and adaptive edge–cloud inference while balancing prediction accuracy, latency, model size, and computational cost.
 
