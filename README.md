@@ -531,7 +531,6 @@ Edge-AI-Enabled-Smart-Grid-Energy-Management-System/
 ├── .gitignore
 ├── docker-compose.yml
 ├── Dockerfile
-├── LICENSE
 ├── Makefile
 ├── pyproject.toml
 ├── README.md
@@ -785,9 +784,16 @@ Potential research and engineering applications include:
 
 ---
 
-## License
+## Usage and Attribution
 
-This project is released under the **MIT License**. See the `LICENSE` file for details.
+This repository is provided for research, educational, and portfolio
+demonstration purposes.
+
+The project reflects collaborative research and engineering work, together
+with subsequent implementation and development. Relevant publications and
+research contributions are acknowledged in the references below.
+
+No open-source license is currently granted for this repository.
 
 ---
 
