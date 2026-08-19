@@ -1,0 +1,255 @@
+{
+  "best_forecast_model": {
+    "experiment": "full_features",
+    "model": "hist_gradient_boosting",
+    "n_features": 18,
+    "mae_kw": 13.2751914820514,
+    "rmse_kw": 22.500051014816986,
+    "r2": 0.8329365488086613,
+    "inference_ms_per_sample": 0.008230769531269999,
+    "serialized_size_kb": 720.6142578125
+  },
+  "best_anomaly_detector": {
+    "detector": "one_class_svm",
+    "precision": 0.3157894736842105,
+    "recall": 1.0,
+    "f1": 0.48,
+    "predicted_anomaly_rate": 0.13194444444444445
+  },
+  "forecast_benchmarks": [
+    {
+      "experiment": "full_features",
+      "model": "persistence_lag1",
+      "n_features": 18,
+      "mae_kw": 21.397683712617265,
+      "rmse_kw": 42.238840857288295,
+      "r2": 0.4112398242492089,
+      "inference_ms_per_sample": 0.0,
+      "serialized_size_kb": 0.0
+    },
+    {
+      "experiment": "full_features",
+      "model": "ridge",
+      "n_features": 18,
+      "mae_kw": 17.076445850834066,
+      "rmse_kw": 29.829383118968487,
+      "r2": 0.7063682675963234,
+      "inference_ms_per_sample": 0.0009040136719207226,
+      "serialized_size_kb": 1.75390625
+    },
+    {
+      "experiment": "full_features",
+      "model": "random_forest",
+      "n_features": 18,
+      "mae_kw": 13.783154295257061,
+      "rmse_kw": 26.289813469664846,
+      "r2": 0.7719188192132045,
+      "inference_ms_per_sample": 0.044629027343479066,
+      "serialized_size_kb": 1502.056640625
+    },
+    {
+      "experiment": "full_features",
+      "model": "extra_trees",
+      "n_features": 18,
+      "mae_kw": 13.68239880816625,
+      "rmse_kw": 25.78059242214102,
+      "r2": 0.7806688937431832,
+      "inference_ms_per_sample": 0.0870914121096078,
+      "serialized_size_kb": 23957.7392578125
+    },
+    {
+      "experiment": "full_features",
+      "model": "hist_gradient_boosting",
+      "n_features": 18,
+      "mae_kw": 13.2751914820514,
+      "rmse_kw": 22.500051014816986,
+      "r2": 0.8329365488086613,
+      "inference_ms_per_sample": 0.008230769531269999,
+      "serialized_size_kb": 720.6142578125
+    },
+    {
+      "experiment": "full_features",
+      "model": "lstm",
+      "n_features": 18,
+      "mae_kw": 14.725092887878418,
+      "rmse_kw": 30.358409982089395,
+      "r2": 0.695860743522644,
+      "inference_ms_per_sample": 0.0013203906250838474,
+      "serialized_size_kb": 30.6630859375,
+      "sequence_length": 12,
+      "epochs": 8,
+      "hidden_dim": 32
+    }
+  ],
+  "ablation_study": [
+    {
+      "experiment": "full_features",
+      "model": "extra_trees",
+      "n_features": 18,
+      "mae_kw": 13.682398808166251,
+      "rmse_kw": 25.78059242214102,
+      "r2": 0.7806688937431832,
+      "inference_ms_per_sample": 0.08556616601573808,
+      "serialized_size_kb": 23957.7392578125
+    },
+    {
+      "experiment": "no_temporal_features",
+      "model": "extra_trees",
+      "n_features": 11,
+      "mae_kw": 14.007817759541599,
+      "rmse_kw": 26.56083424448365,
+      "r2": 0.76719201798227,
+      "inference_ms_per_sample": 0.08702293945317408,
+      "serialized_size_kb": 23979.015625
+    },
+    {
+      "experiment": "no_grid_state_features",
+      "model": "extra_trees",
+      "n_features": 13,
+      "mae_kw": 13.662172340788358,
+      "rmse_kw": 26.224318586465607,
+      "r2": 0.773053824820592,
+      "inference_ms_per_sample": 0.06652952929675493,
+      "serialized_size_kb": 24181.6787109375
+    },
+    {
+      "experiment": "no_communication_features",
+      "model": "extra_trees",
+      "n_features": 15,
+      "mae_kw": 14.51273373531915,
+      "rmse_kw": 29.83121859836281,
+      "r2": 0.7063321306387573,
+      "inference_ms_per_sample": 0.0644651093750781,
+      "serialized_size_kb": 27444.1806640625
+    }
+  ],
+  "anomaly_benchmarks": [
+    {
+      "detector": "statistical",
+      "precision": 0.10909090909090909,
+      "recall": 1.0,
+      "f1": 0.19672131147540983,
+      "predicted_anomaly_rate": 0.3819444444444444
+    },
+    {
+      "detector": "isolation_forest",
+      "precision": 0.2072072072072072,
+      "recall": 0.9583333333333334,
+      "f1": 0.34074074074074073,
+      "predicted_anomaly_rate": 0.19270833333333334
+    },
+    {
+      "detector": "one_class_svm",
+      "precision": 0.3157894736842105,
+      "recall": 1.0,
+      "f1": 0.48,
+      "predicted_anomaly_rate": 0.13194444444444445
+    }
+  ],
+  "time_series_backtest": [
+    {
+      "model": "ridge",
+      "folds": 4,
+      "mae_mean_kw": 16.045813094552333,
+      "mae_std_kw": 0.6187197559185592,
+      "rmse_mean_kw": 26.786312244691548,
+      "rmse_std_kw": 1.8980362797974608,
+      "r2_mean": 0.7363651981039612,
+      "r2_std": 0.02068490458709932
+    },
+    {
+      "model": "random_forest",
+      "folds": 4,
+      "mae_mean_kw": 13.67501210715929,
+      "mae_std_kw": 0.15128808292236468,
+      "rmse_mean_kw": 24.694932591180937,
+      "rmse_std_kw": 1.3343668177162507,
+      "r2_mean": 0.775661248665801,
+      "r2_std": 0.015012520815796185
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "folds": 4,
+      "mae_mean_kw": 13.899165041204135,
+      "mae_std_kw": 0.3565393676536366,
+      "rmse_mean_kw": 22.60823467041934,
+      "rmse_std_kw": 0.7101946825457722,
+      "r2_mean": 0.811298131484136,
+      "r2_std": 0.01676262914790707
+    }
+  ],
+  "feature_importance": [
+    {
+      "feature": "load_rolling_4",
+      "importance": 0.29073165517549027
+    },
+    {
+      "feature": "load_lag_1",
+      "importance": 0.18576994279896022
+    },
+    {
+      "feature": "hour_sin",
+      "importance": 0.12476994641798413
+    },
+    {
+      "feature": "hour_cos",
+      "importance": 0.06505943157622271
+    },
+    {
+      "feature": "battery_soc",
+      "importance": 0.05502481223198757
+    },
+    {
+      "feature": "power_deviation_kw",
+      "importance": 0.052485285817040254
+    },
+    {
+      "feature": "load_lag_4",
+      "importance": 0.05226545808198218
+    },
+    {
+      "feature": "solar_irradiance_wm2",
+      "importance": 0.04014938915383267
+    },
+    {
+      "feature": "communication_latency_ms",
+      "importance": 0.03867748914412367
+    },
+    {
+      "feature": "message_frequency_hz",
+      "importance": 0.027475845815520896
+    },
+    {
+      "feature": "temperature_c",
+      "importance": 0.02542673834504413
+    },
+    {
+      "feature": "renewable_kw",
+      "importance": 0.010431081089668918
+    },
+    {
+      "feature": "load_rate_of_change",
+      "importance": 0.008064176785063033
+    },
+    {
+      "feature": "day_of_week",
+      "importance": 0.006792026504177927
+    },
+    {
+      "feature": "voltage_pu",
+      "importance": 0.006271059995439025
+    },
+    {
+      "feature": "frequency_hz",
+      "importance": 0.005829281558580604
+    },
+    {
+      "feature": "wind_speed_ms",
+      "importance": 0.004424100523310297
+    },
+    {
+      "feature": "device_state_transition",
+      "importance": 0.00035227898557152937
+    }
+  ]
+}
