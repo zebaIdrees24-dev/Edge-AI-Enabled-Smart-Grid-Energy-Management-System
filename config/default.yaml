@@ -1,0 +1,32 @@
+seed: 42
+data:
+  rows: 2880
+  interval_minutes: 15
+  anomaly_rate: 0.04
+controller:
+  uncertainty_threshold: 0.25
+  anomaly_threshold: 0.55
+  grid_frequency_min_hz: 49.5
+  grid_frequency_max_hz: 50.5
+  voltage_min_pu: 0.90
+  voltage_max_pu: 1.10
+  battery_low_soc: 0.15
+  battery_high_soc: 0.90
+  cloud_available: true
+models:
+  edge_trees: 60
+  cloud_trees: 200
+  cloud_max_depth: 14
+  anomaly_detector: isolation_forest  # isolation_forest | one_class_svm | statistical
+security:
+  log_path: reports/security_events.jsonl
+  hash_identifiers: true
+connectivity:
+  mode: mock
+  mqtt_topic: smartgrid/site-001/telemetry
+  mqtt_qos: 1
+research:
+  train_fraction: 0.80
+  lstm_sequence_length: 12
+  lstm_hidden_dim: 32
+  lstm_epochs: 12

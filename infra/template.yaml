@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Event-processing backend for smart-grid edge telemetry
+
+Parameters:
+  IoTTopicRuleArn:
+    Type: String
+    Description: ARN of the separately managed AWS IoT topic rule allowed to invoke Lambda
+
+Resources:
+  TelemetryBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Enabled
+
+  TelemetryFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda/
+      Handler: app.handler
+      Runtime: python3.12
+      Timeout: 10
+      MemorySize: 256
+      Environment:
+        Variables:
+          BUCKET_NAME: !Ref TelemetryBucket
+      Policies:
+        - S3WritePolicy:
+            BucketName: !Ref TelemetryBucket
+
+  IoTInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref TelemetryFunction
+      Principal: iot.amazonaws.com
+      SourceArn: !Ref IoTTopicRuleArn
+
+Outputs:
+  BucketName:
+    Value: !Ref TelemetryBucket
+  FunctionArn:
+    Value: !GetAtt TelemetryFunction.Arn
+
