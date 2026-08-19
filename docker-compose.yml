@@ -1,0 +1,9 @@
+services:
+  ems-demo:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+      - ./reports:/app/reports
+    command: ["smartgrid-ems", "demo"]
+

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartgrid-edge-cloud-ems"
+version = "0.1.0"
+description = "Adaptive edge-cloud energy management and anomaly detection for smart grids"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+dependencies = [
+  "joblib>=1.3",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "PyYAML>=6.0",
+  "scikit-learn>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5"]
+notebook = ["jupyter>=1.0", "matplotlib>=3.8"]
+industrial = ["boto3>=1.34", "paho-mqtt>=2.1", "pymodbus>=3.7", "python-can>=4.4", "requests>=2.32"]
+deep-learning = ["torch>=2.2"]
+
+[project.scripts]
+smartgrid-ems = "smartgrid_ems.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
