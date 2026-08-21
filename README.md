@@ -113,7 +113,7 @@ Data are split chronologically (first 80% training, last 20% evaluation) to redu
 
 The project separates the **runtime EMS path** from a **research experimentation path**. This makes it possible to compare candidate algorithms against simple baselines, quantify the value of feature groups, measure temporal stability across folds, and evaluate the accuracy/latency/model-size trade-off before selecting an edge or cloud model. The experiments are deterministic where practical, use chronological splits, fit scalers only on training data, and persist machine-readable results for reproducibility.
 
-A verified synthetic-data run is documented in [`Docs/VALIDATION.md`](docs/VALIDATION.md). In that run, HistGradientBoosting achieved the best single-holdout MAE (13.28 kW), while Random Forest achieved the best mean MAE across four rolling time folds (13.68 kW). The compact 8-epoch LSTM used about 31 KB of serialized weights, illustrating a different accuracy/footprint trade-off. These are software-validation results on synthetic data, not claims of real-grid performance.
+A verified synthetic-data run is documented in [`Docs/VALIDATION.md`](Docs/VALIDATION.md). In that run, HistGradientBoosting achieved the best single-holdout MAE (13.28 kW), while Random Forest achieved the best mean MAE across four rolling time folds (13.68 kW). The compact 8-epoch LSTM used about 31 KB of serialized weights, illustrating a different accuracy/footprint trade-off. These are software-validation results on synthetic data, not claims of real-grid performance.
 
 ## Results & visualizations
 
